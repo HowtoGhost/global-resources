@@ -2,6 +2,159 @@
  * Styles for the Navigation Bar
  */
 
+
+/*
+ * Annoucnement Bar Section
+ */
+
+ .announcement-flex {
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	-webkit-align-items: center;
+  	justify-content: center;
+  	-webkit-justify-content: center;
+	padding: 15px;
+	list-style-type: none;
+	font-size: 16px;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	margin: 0;
+	background-color: #273338;
+
+	li {
+		text-align: center;
+		align-self: stretch;
+		-webkit-align-self: stretch;
+  		display: flex;
+  		display: -webkit-flex;
+  		align-content: center;
+  		-webkit-align-content: center;
+	}
+}
+
+
+.nav-brand-flex {
+	margin-right: auto;
+	height: 100%;
+	display: flex;
+	display: -webkit-flex;
+	text-decoration: none;
+	color: white;
+
+	li {
+		align-self: center;
+		-webkit-align-self: center;
+		display: flex;
+		display: -webkit-flex;
+
+		#nav-site-title {
+			align-self: center;
+			font-size: 2.5rem;
+		}
+	}
+
+	img {
+		height: 40px;
+		margin-right: 10px;
+	}
+
+	&:hover {
+		color: white;
+	}
+
+	@media (max-width: 700px) {
+		display: none;
+	} 
+}
+
+.nav-action-flex {
+	text-align: center;
+
+	a {
+		text-decoration: none;
+		flex: 1;
+		-webkit-flex: 1;
+  		align-self: center;
+  		-webkit-align-self: center;
+  		font-size: 16px;
+  		color: white;
+
+		&:hover {
+			color: white;
+		}
+
+		@media (max-width: 760px) {
+			font-size: 1.5rem;
+		} 
+	}
+
+	&:hover {
+		background-color: white;
+	}
+
+	button {
+		background-color: #88a3b0;
+		margin: 0 30px;
+		border: 0 none;
+		border-radius: 4px;
+		color: #FFFFFF;
+		cursor: pointer;
+		padding: 7.5px 20px;
+		text-align: center;
+		text-decoration: none;
+	}
+}
+
+/*
+ * Other Sites Bar
+ */
+
+ .other-sites-flex {
+ 	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	-webkit-align-items: center;
+  	justify-content: center;
+  	-webkit-justify-content: center;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	
+	list-style-type: none;
+	padding: 20px;
+	margin: 0;
+	background-color: #36464c;
+
+	a {
+		height: 100%;
+		display: flex;
+		display: -webkit-flex;
+		text-decoration: none;
+		padding: 0 15px;
+		font-size: 16px;
+		color: #88a3b0;
+
+		div {
+			align-self: center;
+			-webkit-align-self: center;
+		}
+
+		&:hover {
+			color: #e3f2fd;
+		}
+
+		img {
+			height: 100%;
+  			width: 30px;
+  			margin-right: 5px;
+		}
+	}
+ }
+
+ /*
+  * Current Site's Nav
+  */
+
 .main-nav-flex {
 	display: flex;
 	display: -webkit-flex;
@@ -13,17 +166,12 @@
 	font-size: 16px;
 	margin: 0;
 	background-color: #494949;
-	padding: 0;
 
-	li {
+	a {
+		padding: 20px;
 		text-align: center;
-
-		a {
-			color: white;
-			text-decoration: none;
-			font-weight: 300;
-		 	font-family: 'Open Sans', sans-serif;
-		}
+		color: #e3f2fd;
+		text-decoration: none;
 	}
 
 	@media (max-width: 760px) {
@@ -33,118 +181,5 @@
 		flex-direction: column;
 		-webkit-flex-direction: column;
 		background-color: #f6f6f6;
-	}
-}
-
-.main-brand-flex {
-	margin-right: auto;
-	margin-left: 10px;
-	font-size: 24px;
-
-	@media (max-width: 850px) {
-		font-size: 16px;
-		margin-left: 5px;
-	}
-
-	@media (max-width: 760px) {
-		margin: 0;
-		background-color: #494949;
-		width: 100%;
-		border-radius: 0;
-		font-size: 36px;
-		padding: 10px 0;
-		margin-bottom: 10px;
-	}
-}
-
-.main-img-flex {
-	padding: 0 7.5px;
-	align-self: stretch;
-	-webkit-align-self: stretch;
-	display: flex;
-	display: -webkit-flex;
-	align-content: center;
-	-webkit-align-content: center;
-
-	a {
-		align-self: center;
-		-webkit-align-self: center;
-		display: flex;
-		display: -webkit-flex;
-
-		img {
-			margin: 3px;
-			height: 25px;
-			align-self: center;
-			-webkit-align-self: center;
-		}
-	}
-
-	&:hover {
-		background-color: white;
-
-		a {
-			color: black;
-		}
-	}
-
-	@media (max-width: 760px) {
-		display: none;
-	}
-}
-
-.main-link-flex {
-	font-family: 'Open Sans';
-	font-size: 14px;
-	padding: 10px 15px;
-	align-self: stretch;
-	-webkit-align-self: stretch;
-	display: flex;
-	display: -webkit-flex;
-	align-content: center;
-	-webkit-align-content: center;
-	justify-content: center;
-	-webkit-justify-content: center;
-
-	a {
-		text-decoration: none;
-		// flex: 1;
-		align-self: center;
-		-webkit-align-self: center;
-
-	}
-
-	&:hover {
-		background-color: white;
-
-		a {
-			color: black;
-		}
-	}
-
-	@media (max-width: 1000px) {
-		padding: 10px;
-	}
-
-	@media (max-width: 760px) {
-		width: 90%;
-		background-color: #494949;
-		border-radius: 20px;
-		margin-bottom: 10px;
-		margin-left: auto;
-		margin-right: auto;
-		font-size: 22px;
-  		padding: 5px;
-	}
-}
-
-.navbar-fixed-top {
-	position: fixed;
-  	width: 100%;
-  	top: 0;
-  	z-index: 100;
-
-  	@media (max-width: 760px) {
-		position: relative;
 	}
 }
