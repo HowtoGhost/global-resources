@@ -1,0 +1,54 @@
+<div id="nav-announcement">
+    <ul class="announcement-flex">
+        <a  class="nav-brand-flex" href={{@blog.url}}>
+            <li>
+                <img src="/global-resources/icons/how-to-ghost_brand.png" \>
+                <div id="nav-site-title">{{@blog.title}}</div>
+            </li>
+        </a>
+        <li class="nav-action-flex">
+            <a href="https://ghostforbeginners.com/ebook">Get updates on our upcoming eBook! <button id="announcement-subscribe">More Info</button> </a>
+        </li>
+    </ul>
+</div>
+
+<div id="other-sites-nav">
+    <div class="other-sites-flex">
+        <a href="https://ghostforbeginners.com">
+            <img src="/global-resources/icons/ghost-for-beginners_logo.svg"/>
+            <div class="other-nav-link">Ghost for Beginners</div>
+        </a>
+        <a href="https://allaboutghost.com">
+            <img src="/global-resources/icons/all-about-ghost_logo.svg"/>
+            <div class="other-nav-link active-site">All About Ghost</div>
+        </a>
+        <a href="https://allghostthemes.com">
+            <img src="/global-resources/icons/all-ghost-themes_logo.svg"/>
+            <div class="other-nav-link">All Ghost Themes</div>
+        </a>
+        <a href="https://howtoinstallghost.com">
+            <img src="/global-resources/icons/how-to-install-ghost_logo.svg"/>
+            <div class="other-nav-link">How to Install Ghost</div>
+        </a>
+    </div>
+</div>
+
+<script>
+    var siteArray = $('.other-sites-flex a')
+    var thisSite = window.location.href;
+    for (i = 0; i < siteArray.length; i++) {
+        if (thisSite === $(siteArray[i]).attr('href')) {
+            $(thisSite).addClass("current-site");
+        }
+    }
+</script>
+
+<div id="main-nav">
+    <div class="main-nav-flex">
+        {{#foreach navigation}}
+            <a href="{{url absolute="true"}}">
+                <div class="nav-link">{{label}}</div>
+            </a>
+        {{/foreach}}
+    </div>
+</div>
