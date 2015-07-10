@@ -117,7 +117,7 @@
 	-webkit-flex-wrap: wrap;
 	
 	list-style-type: none;
-	padding: 20px;
+	padding: 5px;
 	margin: 0;
 	background-color: #36464c;
 
@@ -126,7 +126,7 @@
 		display: flex;
 		display: -webkit-flex;
 		text-decoration: none;
-		padding: 0 15px;
+		padding: 15px;
 		font-size: 16px;
 		color: #88a3b0;
 
@@ -144,6 +144,11 @@
   			width: 30px;
   			margin-right: 5px;
 		}
+	}
+
+	@media (max-width: 450px) {
+		flex-direction: column;
+		-webkit-flex-direciton: column;
 	}
 }
 
@@ -176,6 +181,5 @@
 		-webkit-flex-wrap: nowrap;
 		flex-direction: column;
 		-webkit-flex-direction: column;
-		background-color: #f6f6f6;
 	}
 }

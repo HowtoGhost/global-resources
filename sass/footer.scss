@@ -28,7 +28,7 @@
 		margin: 5px;
 	}
 
-	@media (max-width: 550px) {
+	@media (max-width: 600px) {
 		flex-direction: column;
 		-webkit-flex-direction: column;
 	}
@@ -40,6 +40,21 @@
 
 	.footer-hr {
 		margin: 25px;
+
+		@media (max-width: 600px) {
+			margin: 5px 10px;
+		}
+	}
+
+	h4 {
+		@media (max-width: 600px) {
+			margin-bottom: 10px;
+			font-weight: 400;
+		}
+	}
+
+	@media (max-width: 600px) {
+		margin-bottom: 20px;
 	}
 }
 
@@ -48,4 +63,3 @@
 	font-weight: 300;
 	font-family: 'Open Sans';
 }
-
