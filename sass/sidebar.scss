@@ -137,7 +137,7 @@
 	padding-left: 35px; 
 	width:80%;
 }
-#optin input[type="submit"] {
+#optin button[type="submit"] {
 	background: #494949;
 	border: 1px solid #111;
 	color: #fff;
@@ -147,9 +147,6 @@
 	padding: 8px 0;
 	text-shadow: -1px -1px #3a060a;
 	width: 90%
-}
-#optin input[type="submit"]:hover {
-
 }
 #optin h4 {
 	color: white;
