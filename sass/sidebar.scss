@@ -117,6 +117,7 @@
 }
 #optin input {
 	border: 1px solid #111;
+	width: 80%;
 	font-size: 15px;
 	margin-bottom: 10px;
 	padding: 8px 10px;
@@ -127,17 +128,8 @@
 	-moz-box-shadow: 0 2px 2px #111;
 	-webkit-box-shadow: 0 2px 2px #111
 }
-#optin input.email { 
-	background: #fff url(/assets/images/email.png) no-repeat 10px center; 
-	padding-left: 35px; 
-	width:80%;
-}
-#optin input.name { 
-	background: #fff url(/assets/images/name.png) no-repeat 10px center; 
-	padding-left: 35px; 
-	width:80%;
-}
-#optin button[type="submit"] {
+
+.subscribe_button {
 	background: #494949;
 	border: 1px solid #111;
 	color: #fff;
@@ -146,8 +138,14 @@
 	font-weight: bold;
 	padding: 8px 0;
 	text-shadow: -1px -1px #3a060a;
-	width: 90%
+	width: 100%
 }
+
+#ck_success_msg {
+	color: white;
+	border: 1px solid white;
+}
+
 #optin h4 {
 	color: white;
 	font-family: "Open Sans",sans-serif;
