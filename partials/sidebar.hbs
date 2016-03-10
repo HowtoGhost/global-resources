@@ -1,14 +1,39 @@
 <div id="sidebar" class="flex-sidebar">
 
-    <div id="sidebar-book" class="sidebar-content">
-        <h4 class="sidebar-header"><a href="https://www.ghostforbeginners.com/ebook">Ghost for Beginners eBook</a></h4>
-        <div id="book-image-container">
-            <a id="book-backup-image" class="book-image" href="https://www.ghostforbeginners.com/ebook"><img src="{{asset "images/howtoghost_2.jpg"}}" /></a>
+    <div id="optin" class="sidebar-content">
+        <script src="https://app.convertkit.com/assets/CKJS4.js?v=21"></script>
+        <h4 class="sidebar-header">Ghost for Beginners eBook</h4>
+        <div class="optin-text">Join hundreds of others who get weekly content about Ghost and get the first two sections of our Ghost eBook for free!</div>
+        <div class="ck_form ck_naked">
+            <div class="ck_form_fields">
+                <div id='ck_success_msg' style='display:none;'>
+                    <p>Success! Now check your email to confirm your subscription.</p>
+                </div>
+                <!--  Form starts here  -->
+                <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://app.convertkit.com/landing_pages/23324/subscribe" data-remote="true">
+                    <input type="hidden" value="{&quot;form_style&quot;:&quot;naked&quot;,&quot;embed_style&quot;:&quot;inline&quot;,&quot;embed_trigger&quot;:&quot;scroll_percentage&quot;,&quot;scroll_percentage&quot;:&quot;70&quot;,&quot;delay_seconds&quot;:&quot;10&quot;,&quot;display_position&quot;:&quot;br&quot;,&quot;display_devices&quot;:&quot;all&quot;,&quot;days_no_show&quot;:&quot;15&quot;,&quot;converted_behavior&quot;:&quot;show&quot;}" id="ck_form_options">
+                    <input type="hidden" name="id" value="23324" id="landing_page_id">
+                    <div class="ck_errorArea">
+                        <div id="ck_error_msg" style="display:none">
+                            <p>There was an error submitting your subscription. Please try again.</p>
+                        </div>
+                    </div>
+                    <div class="ck_control_group ck_email_field_group">
+                        <label class="ck_label" for="ck_emailField" style="display: none">Email Address</label>
+                        <input type="text" name="first_name" class="ck_first_name" id="ck_firstNameField" placeholder="First Name">
+                        <input type="email" name="email" class="ck_email_address" id="ck_emailField" placeholder="Email Address" required>
+                    </div>
+                    <button class="subscribe_button ck_subscribe_button btn fields" id='ck_subscribe_button'>
+                        Subscribe
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
     <div id="sidebar-twitter">
         <a class="twitter-follow-button"
           href="https://twitter.com/howtoghost"
+          data-show-count="true"
           data-show-count="true"
           data-lang="en">
         Follow @howtoghost
@@ -37,36 +62,16 @@
         }(document, 'script', 'facebook-jssdk'));</script>
     </div>
     
-    <div id="optin" class="sidebar-content">
-        <script src="https://app.convertkit.com/assets/CKJS4.js?v=21"></script>
-        <h4 class="sidebar-header">Ghost for Beginners eBook</h4>
-        <div class="optin-text">Get the first two sections of our Ghost eBook for free!</div>
-        <div class="ck_form ck_naked">
-            <div class="ck_form_fields">
-                <div id='ck_success_msg' style='display:none;'>
-                    <p>Success! Now check your email to confirm your subscription.</p>
-                </div>
-                <!--  Form starts here  -->
-                <form id="ck_subscribe_form" class="ck_subscribe_form" action="https://app.convertkit.com/landing_pages/23324/subscribe" data-remote="true">
-                    <input type="hidden" value="{&quot;form_style&quot;:&quot;naked&quot;,&quot;embed_style&quot;:&quot;inline&quot;,&quot;embed_trigger&quot;:&quot;scroll_percentage&quot;,&quot;scroll_percentage&quot;:&quot;70&quot;,&quot;delay_seconds&quot;:&quot;10&quot;,&quot;display_position&quot;:&quot;br&quot;,&quot;display_devices&quot;:&quot;all&quot;,&quot;days_no_show&quot;:&quot;15&quot;,&quot;converted_behavior&quot;:&quot;show&quot;}" id="ck_form_options">
-                    <input type="hidden" name="id" value="23324" id="landing_page_id">
-                    <div class="ck_errorArea">
-                        <div id="ck_error_msg" style="display:none">
-                            <p>There was an error submitting your subscription. Please try again.</p>
-                        </div>
-                    </div>
-                    <div class="ck_control_group ck_email_field_group">
-                        <label class="ck_label" for="ck_emailField" style="display: none">Email Address</label>
-                        <input type="text" name="first_name" class="ck_first_name" id="ck_firstNameField" placeholder="First Name">
-                        <input type="email" name="email" class="ck_email_address" id="ck_emailField" placeholder="Email Address" required>
-                    </div>
-                    <button class="subscribe_button ck_subscribe_button btn fields" id='ck_subscribe_button'>
-                        Subscribe
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
+    {{#get "posts" limit="5" as |recents|}}
+        <section class="sidebar-content">
+            <h4 class="sidebar-header">Recent posts</h4>
+            <ol class="recent-posts">
+                {{#foreach recents}}
+                    <li><a href="{{url}}">{{title}}</a></li>
+                {{/foreach}}
+            </ol>
+        </section>
+    {{/get}}
     
     {{!-- <a class="large-button" href="http://www.allaboutghost.com/2014-income-and-statistics-report/">2014 Income Report</a> --}}
 </div>

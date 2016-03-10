@@ -88,6 +88,22 @@
     width: 100%;
 }
 
+.recent-posts {
+	margin: 0;
+	list-style: none;
+	padding: 5px;
+
+	li {
+		padding: 5px;
+		line-height: 20px;
+		a {
+			text-decoration: none;
+			color: white;
+			cursor: pointer;
+		}
+	}
+}
+
 /*
  * Style for email Optins
  */
